@@ -1,0 +1,79 @@
+[
+  {
+    "name": "controller",
+    "match": "user",
+    "value": "user",
+    "nodes": [
+      {
+        "name": "action",
+        "match": "edit",
+        "value": "edit",
+        "nodes": [
+          {
+            "name": "id",
+            "match": "([1-9][0-9]{0,6})",
+            "value": "$1"
+          }
+        ]
+      },
+      {
+        "name": "action",
+        "match": "delete",
+        "value": "delete",
+        "nodes": [
+          {
+            "name": "id",
+            "match": "([1-9][0-9]{0,6})",
+            "value": "$1"
+          }
+        ]
+      },
+      {
+        "name": "action",
+        "match": "add",
+        "value": "add"
+      },
+      {
+        "name": "action",
+        "match": 0,
+        "value": "index",
+        "nodes": [
+          {
+            "name": "page",
+            "match": "([1-9][0-9]{0,6})",
+            "value": "$1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "controller",
+    "match": "country",
+    "value": "country",
+    "nodes": [
+      {
+        "name": "action",
+        "match": 0,
+        "value": "index"
+      },
+      {
+        "name": "action",
+        "match": "add",
+        "value": "add"
+      }
+    ]
+  },
+  {
+    "name": "controller",
+    "match": 0,
+    "value": "main",
+    "nodes": [
+      {
+        "name": "action",
+        "match": 0,
+        "value": "index"
+      }
+    ]
+  }
+]
